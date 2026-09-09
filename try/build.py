@@ -36,16 +36,6 @@ FOOTER = "A MAG Product"
 # DECISIONS.md for the door test and why detter.pages.dev is not linked.
 CARDS = [
     {
-        "name": "Detter Drive",
-        "what": "Put in a delivery offer and it tells you to take it or skip it, "
-                "and shows you the maths it used.",
-        "url": "https://detter.co.nz",
-        "button": "Open Detter Drive",
-        "try": "Try this: put in a $12 offer that is 6 km away and watch what it says.",
-        "ios": "iPhone: tap the share button, then Add to Home Screen.",
-        "android": "Android: tap the three dots, then Add to Home screen.",
-    },
-    {
         "name": "MirrorMirror",
         "what": "Copy something on your Mac and it is on your phone. There is no "
                 "account and no cloud. This opens in demo mode, so it works with "
@@ -53,6 +43,17 @@ CARDS = [
         "url": "./mirrormirror/",
         "button": "Open the MirrorMirror demo",
         "try": "Try this: tap Run a sample Crunch.",
+        "ios": "iPhone: tap the share button, then Add to Home Screen.",
+        "android": "Android: tap the three dots, then Add to Home screen.",
+    },
+    {
+        "name": "Detter Drive",
+        "what": "Put in a delivery offer and it tells you to take it or skip it, "
+                "and shows you the maths it used. It asks you to sign in first, "
+                "by Google or by a link sent to your email.",
+        "url": "https://detter.co.nz",
+        "button": "Open Detter Drive",
+        "try": "Try this: sign in, then put in a $12 offer that is 6 km away.",
         "ios": "iPhone: tap the share button, then Add to Home Screen.",
         "android": "Android: tap the three dots, then Add to Home screen.",
     },
