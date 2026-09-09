@@ -40,7 +40,7 @@ CARDS = [
         "what": "Copy something on your Mac and it is on your phone. There is no "
                 "account and no cloud. This opens in demo mode, so it works with "
                 "no Mac in front of you.",
-        "url": "./mirrormirror/",
+        "url": "https://abed92009-cell.github.io/pages/try/mirrormirror/",
         "button": "Open the MirrorMirror demo",
         "try": "Try this: tap Run a sample Crunch.",
         "ios": "iPhone: tap the share button, then Add to Home Screen.",
