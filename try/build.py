@@ -104,6 +104,7 @@ def page(path_label):
 <title>Try Detter</title>
 <meta name="description" content="{LINE}">
 <meta name="robots" content="noindex">
+<link rel="icon" href="https://abed92009-cell.github.io/pages/favicon.png">
 <style>{CSS}</style>
 </head>
 <body>
