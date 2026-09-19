@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MirrorMirror</title>
+<link rel="icon" href="../favicon.png">
+<meta name="description" content="Copy something on your Mac and it is on your phone. Compress what is on a page and see exactly what it saved. Nothing leaves your machines.">
+<style>
+  :root{--bg:#e9e7e0;--card:#fff;--tp:#1c1c1a;--ts:#5f5e5a;--tt:#8c8b85;--info:#1d9e75;--warn:#8a6d1f}
+  body{margin:0;background:var(--bg);color:var(--tp);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  main{max-width:680px;margin:0 auto;padding:32px 20px 64px}
+  .card{background:var(--card);border-radius:14px;padding:24px 22px;margin-bottom:16px}
+  h1{font-size:28px;margin:0 0 4px} h2{font-size:17px;margin:22px 0 6px}
+  h2:first-child{margin-top:0}
+  .sub{color:var(--ts);margin:0 0 24px}
+  .big{font-size:19px;font-weight:700;color:var(--info);margin-top:0}
+  ul{padding-left:20px} li{margin:6px 0}
+  ol{padding-left:20px} ol li{margin:6px 0}
+  a{color:var(--info)}
+  code{background:#f3f1ec;border-radius:5px;padding:1px 5px;font-size:14px}
+  .note{color:var(--warn);font-size:15px}
+  .go{display:inline-block;background:var(--info);color:#fff;text-decoration:none;
+      border-radius:10px;padding:12px 18px;font-weight:600;margin-top:6px;min-height:44px;box-sizing:border-box}
+  footer{color:var(--tt);font-size:13px;text-align:center;margin-top:28px}
+</style>
+</head>
+<body>
+<main>
+  <h1>MirrorMirror</h1>
+  <p class="sub">Your clipboard, on every screen you own. Nothing leaves them.</p>
+
+  <div class="card">
+    <p class="big">Copy something on your Mac and it is on your phone.</p>
+    <p>No account. No sign-in. No cloud. Your Mac and your phone talk to each other directly over your own network, and there is no server of ours in the middle because there is no server of ours at all.</p>
+    <p>It also compresses. Give it a long page and it hands back a shorter version that still means the same thing, and it tells you exactly how many tokens that saved. Not an estimate. The real count, every time, and the original is always one tap away.</p>
+  </div>
+
+  <div class="card">
+    <h2>Try it now, with nothing installed</h2>
+    <p>The demo runs in your browser with sample data. It needs no Mac, no sign-up and no download.</p>
+    <p><a class="go" href="../try/mirrormirror/">Open the demo</a></p>
+    <p>On an iPhone, tap share then Add to Home Screen, and it behaves like an app. On Android, tap the three dots then Add to Home screen.</p>
+  </div>
+
+  <div class="card">
+    <h2>The Compressed Cursor, for Chrome</h2>
+    <p>An extension that reads the page you are on, compresses it, and puts the result on your clipboard with its ledger line. It sees the page before the clipboard flattens it, so headings and structure survive that a plain copy has already destroyed.</p>
+    <p><a class="go" href="compressed-cursor-extension.zip">Download the extension</a></p>
+    <ol>
+      <li>Unzip it.</li>
+      <li>Open <code>chrome://extensions</code> and turn on Developer mode.</li>
+      <li>Click Load unpacked and choose the folder.</li>
+    </ol>
+    <p class="note"><strong>Say plainly:</strong> the extension talks to MirrorMirror running on your own Mac, at <code>127.0.0.1:7727</code>. That Mac side is not published yet. Without it the extension will tell you the Mac is not answering and copy nothing, which is deliberate: it will never hand you the uncompressed text and let you believe you saved something.</p>
+  </div>
+
+  <div class="card">
+    <h2>Connecting an assistant</h2>
+    <p>You can let an assistant read your wheel, so you can ask it about something you copied instead of finding and pasting it again. Claude, Codex and anything else that speaks the Model Context Protocol.</p>
+    <ul>
+      <li>You make a token yourself and give it a name, one per assistant.</li>
+      <li>The token is shown to you once. What stays on your Mac is a hash of it, never the token, so it cannot be read back out afterwards.</li>
+      <li>You revoke it yourself. Revoking one assistant does not disturb any other, and a revoked token is refused even from the Mac itself.</li>
+      <li>The door answers on your own Mac and your own private network, and nowhere else.</li>
+    </ul>
+    <p>One assistant, one named connection, because a single shared secret can only be withdrawn by breaking every assistant at once, so in practice it never is.</p>
+  </div>
+
+  <div class="card">
+    <h2>What it costs</h2>
+    <p>Nothing. There is no price, no tier and no subscription. There is nothing to cancel, because there was never anything to start.</p>
+
+    <h2>What it holds</h2>
+    <p>What you copied, what it compressed, the counts it kept, and the pairing for your own Mac. All of it on hardware you own. Delete it and it is gone, because there was no other copy.</p>
+  </div>
+
+  <div class="card">
+    <p><a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a> &middot; <a href="../support.html">Support</a> &middot; <a href="../try/">The other things</a></p>
+  </div>
+
+  <footer>Marosh, New Zealand</footer>
+</main>
+</body>
+</html>

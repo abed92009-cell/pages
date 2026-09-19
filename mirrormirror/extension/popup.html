@@ -1,0 +1,33 @@
+<!doctype html><meta charset="utf-8">
+<title>Compressed Cursor</title>
+<style>
+:root{--bg:#e8e7e1;--fg:#1b1b1a;--mut:#6b6b66;--card:#fff;
+ --lossless:#4a7c59;--tight:#1f4fd8;--gist:#7a5cc4}
+body{margin:0;width:320px;background:var(--bg);color:var(--fg);
+ font:13px/1.4 -apple-system,BlinkMacSystemFont,system-ui,sans-serif;padding:14px}
+h1{font-size:14px;margin:0 0 2px;font-weight:700}
+h1 span{font-weight:300}
+p.sub{margin:0 0 12px;font-size:11px;color:var(--mut)}
+.tiers{display:flex;gap:6px;margin-bottom:10px}
+button.t{flex:1;padding:7px 0;border:1px solid #0002;border-radius:8px;background:var(--card);
+ font:600 11px/1 inherit;color:var(--fg);cursor:pointer}
+button.t[aria-pressed="true"]{border-color:currentColor;box-shadow:inset 0 0 0 1px currentColor}
+button.t[data-t="LOSSLESS"]{color:var(--lossless)} button.t[data-t="TIGHT"]{color:var(--tight)}
+button.t[data-t="GIST"]{color:var(--gist)} button.t[data-t=""]{color:var(--mut)}
+button.go{width:100%;padding:10px;border:0;border-radius:9px;background:#1b1b1a;color:#fff;
+ font:700 13px/1 inherit;cursor:pointer}
+#led{margin-top:10px;font-size:11px;color:var(--mut);font-variant-numeric:tabular-nums;min-height:2.4em}
+#day{margin-top:4px;font-size:11px;color:var(--mut);font-variant-numeric:tabular-nums}
+</style>
+<h1>Mirror<span>Mirror</span></h1>
+<p class="sub">Compressed Cursor</p>
+<div class="tiers">
+  <button class="t" data-t="" aria-pressed="true">Auto</button>
+  <button class="t" data-t="LOSSLESS" aria-pressed="false">Lossless</button>
+  <button class="t" data-t="TIGHT" aria-pressed="false">Tight</button>
+  <button class="t" data-t="GIST" aria-pressed="false">Gist</button>
+</div>
+<button class="go" id="go">Compress this page</button>
+<div id="led">Nothing captured yet.</div>
+<div id="day"></div>
+<script src="popup.js"></script>

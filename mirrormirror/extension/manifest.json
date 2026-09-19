@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "MirrorMirror Compressed Cursor",
+  "version": "1.0.0",
+  "description": "Compress what is on the page and copy it ready to paste, with the token ledger shown.",
+  "permissions": ["activeTab", "scripting", "storage", "clipboardWrite"],
+  "host_permissions": ["http://127.0.0.1:7727/*"],
+  "action": { "default_popup": "popup.html", "default_title": "Compressed Cursor" },
+  "icons": { "128": "icon128.png" }
+}

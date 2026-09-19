@@ -20,7 +20,7 @@
 <body>
 <main>
   <h1>MirrorMirror privacy</h1>
-  <p class="sub">Last updated 9 September 2026</p>
+  <p class="sub">Last updated 19 September 2026</p>
 
   <div class="card">
     <p class="big">MirrorMirror collects nothing about you, because there is nowhere for it to go.</p>
@@ -37,13 +37,20 @@
     <p>All of it stays on hardware you own. Deleting the app removes the phone's copy. Deleting the Mac service removes the Mac's.</p>
 
     <h2>What leaves your devices</h2>
-    <p><strong>Nothing.</strong> The app makes no request to any address that is not your own Mac on your own network.</p>
+    <p><strong>Nothing of yours.</strong> Nothing you copied, compressed or paired ever leaves the machines you own. The phone app makes no request to any address that is not your own Mac on your own network, and we checked that rather than assuming it.</p>
+    <p>There is one exception and it is worth naming plainly, because a privacy page that quietly rounds down is worse than none. <strong>The Mac page asks Google Fonts for one typeface</strong>, Aref Ruqaa, used for the Bismillah at the top. That request tells Google a browser on your network asked for a font. It carries nothing about you, nothing you copied, and no identifier. If it does not load, the page falls back to a typeface already on your Mac and nothing breaks. The phone app does not make this request at all.</p>
 
     <h2>Analytics, advertising and tracking</h2>
     <p>None. There is no analytics library, no advertising library, and no identifier for advertisers. The app does not track you across other apps or websites, and there is no third party in the app to track you on their behalf.</p>
 
     <h2>Children</h2>
     <p>The app shows only what its owner copied on their own machine. It has no messaging, no user-generated content shared between people, no purchases and no browsing.</p>
+
+    <h2>The browser extension</h2>
+    <p>The Compressed Cursor extension talks to one address only, 127.0.0.1, which is your own Mac and can never be anyone else's. It is deliberately not given your private network name, because an extension travels with your Chrome profile to every machine you sign into and a network name is not something to carry around. If your Mac is not answering it says so and copies nothing, rather than quietly handing you the uncompressed text and letting you believe you saved something.</p>
+
+    <h2>Connecting an assistant</h2>
+    <p>If you let an assistant read your wheel, you make a token for it yourself and give it a name. The token is shown to you once. <strong>What is kept on your Mac is a hash of it, never the token</strong>, so it cannot be read back out, not by us and not by anything on the machine. You revoke it yourself, one assistant at a time, and a revoked token is refused even from the Mac itself. The door answers on your own Mac and your own private network and nowhere else.</p>
 
     <h2>Demo mode</h2>
     <p>Before you pair a Mac, the app runs in Demo mode with sample data that ships inside the app. Demo mode makes no network request at all.</p>
@@ -55,7 +62,7 @@
     <p>MirrorMirror is made in New Zealand by MAG. Reach the developer through the support link on the app's store page.</p>
   </div>
 
-  <footer>Page 1 &middot; A MAG Product</footer>
+  <footer><a href="terms.html">Terms</a> &middot; <a href="support.html">Support</a> &middot; A MAG Product</footer>
 </main>
 </body>
 </html>
