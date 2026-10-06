@@ -37,9 +37,9 @@ FOOTER = "A MAG Product"
 CARDS = [
     {
         "name": "MirrorMirror",
-        "what": "Copy something on your Mac and it is on your phone. There is no "
-                "account and no cloud. This opens in demo mode, so it works with "
-                "no Mac in front of you.",
+        "what": "Copy something on your Mac and it is on your phone. This demo "
+                "needs no account and no sign-in. It opens in demo mode, so it "
+                "works with no Mac in front of you.",
         "url": "https://abed92009-cell.github.io/pages/try/mirrormirror/",
         "button": "Open the MirrorMirror demo",
         "try": "Try this: tap Run a sample Crunch.",
@@ -53,6 +53,10 @@ CARDS = [
                 "by Google or by a link sent to your email.",
         "url": "https://detter.co.nz",
         "button": "Open Detter Drive",
+        # P526, the Director's ruling of 7/10/2026: the button is hidden until
+        # P472b gives Detter a home. detter.co.nz answers with Replit's 404, so a
+        # button there sends a stranger to a dead page. Set True when it answers.
+        "live": False,
         "try": "Try this: sign in, then put in a $12 offer that is 6 km away.",
         "ios": "iPhone: tap the share button, then Add to Home Screen.",
         "android": "Android: tap the three dots, then Add to Home screen.",
@@ -86,10 +90,11 @@ def page(path_label):
     cards = []
     for c in CARDS:
         extra = f'<p class="hint">{c["try"]}</p>' if len(CARDS) == 1 else ""
+        button = f'<a class="btn" href="{c["url"]}">{c["button"]}</a>' if c.get("live", True) else ""
         cards.append(f"""  <section class="card">
     <h2>{c['name']}</h2>
     <p>{c['what']}</p>
-    <a class="btn" href="{c['url']}">{c['button']}</a>
+    {button}
     {extra}
     <p class="hint"><span>{c['ios']}</span><span>{c['android']}</span></p>
   </section>""")
